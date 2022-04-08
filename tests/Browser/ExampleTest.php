@@ -27,8 +27,8 @@ class ExampleTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/login');
-            $browser->typeSlowly('email', 'sydnee.langworth@example.net')
-                    ->typeSlowly('password', 'password');
+            $browser->typeSlowly('#email_input', 'sydnee.langworth@example.net')
+                    ->typeSlowly('#password_input', 'password');
             $browser->check('#remember_me');
             $browser->press('#login-button');
             $browser->assertSee('Selamat Datang');
@@ -39,15 +39,9 @@ class ExampleTest extends DuskTestCase
     public function testLoginToApplicationAndGoToPost()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('/login');
-            $browser->typeSlowly('email', 'sydnee.langworth@example.net')
-                    ->typeSlowly('password', 'password');
-            $browser->check('#remember_me');
-            $browser->press('#login-button');
-            $browser->assertSee('Selamat Datang');
-            $browser->assertPathIs('/dashboard');
             $browser->visit('/posts');
-            $browser->assertSeeIn('#post_header', 'Post');
+            $browser->pause(3000)->assertPathIs('/posts');
+            $browser->assertSeeIn('#post_header', 'Post')->pause(3000);
         });
     }
 }
