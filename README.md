@@ -15,3 +15,7 @@ php artisan clear-compiled
 ./vendor/bin/phpcbf app --report-full
 
 ./vendor/bin/phpcpd app
+
+php artisan test
+
+php artisan dusk
