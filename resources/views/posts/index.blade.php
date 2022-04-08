@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight" id="post_header">
             {{ __('Posts') }}
         </h2>
     </x-slot>
@@ -12,10 +12,10 @@
                 <card class="bg-white p-8 w-[24rem]"> 
                     <!-- Header -->
                     <header class="flex font-light text-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 rotate-90 -ml-2"  viewBox="0 0 24 24" stroke="#b91c1c">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
-                    </svg>
-                    <p>BLOG</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 rotate-90 -ml-2"  viewBox="0 0 24 24" stroke="#b91c1c">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+                        </svg>
+                        <p id="blog_header">BLOG</p>
                     </header>
 
                     <!-- Title -->
