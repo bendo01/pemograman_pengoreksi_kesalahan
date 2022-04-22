@@ -19,7 +19,7 @@ class ExampleTest extends DuskTestCase
         $this->browse(function (Browser $browser) {
             $browser->visit('/')
                     ->pause(3000)
-                    ->assertSee('Laravel');
+                    ->assertSee('Benny');
         });
     }
     

@@ -16,6 +16,8 @@ php artisan clear-compiled
 
 ./vendor/bin/phpcpd app
 
+./vendor/bin/phpunit --coverage-html=code-coverage
+
 php artisan test
 
 php artisan dusk
